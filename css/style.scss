@@ -209,6 +209,11 @@ footer ul {
         align-items: center;
     }
 
+    .services-full {
+        background-image: url(/images/background-vector-tires.png);
+        background-position: center;
+        background-size: cover;
+    }
     .services-cards {
         display: flex;
         flex-wrap: nowrap;
@@ -291,6 +296,12 @@ footer ul {
 }
 
 /* ABOUT */
+.owner-header {
+    background-image: url(/images/background-vector-tires.png);
+    background-position: center;
+    background-size: cover;
+}
+
 .owners-about {
     padding: 5.3125rem 10rem;
     display: flex;
@@ -302,4 +313,12 @@ footer ul {
 .aboutthe-owners-text {
     display:block;
 }
+
+.business-text {
+    padding: 5.3125rem 10rem;
+}
     
+.split-paragraph {
+    display: flex;
+    gap: 5rem;
+}

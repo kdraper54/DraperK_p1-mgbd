@@ -82,6 +82,16 @@ nav a li{
     font-weight: 100;
 }
 
+.underlined-nav {
+    color: $black;
+    text-transform: capitalize;
+}
+
+.underlined-greenbg {
+    color: $white;
+    text-transform: capitalize;
+}
+
 /* NAVIGATION */
 
 nav ul{
@@ -106,7 +116,7 @@ nav img {
 }
 
 .discountcontent {
-    width: 1920px;
+    width: 100%;
     overflow: hidden;
     background-color: $black;
     color: $white;
@@ -193,14 +203,30 @@ footer ul {
         margin: 0;
         display: flex;
         align-items: center;
-    }
 
-    .divider-tag::before {
+        &::before {
         content: "";
         width: 6rem;
         height: 1rem;
         background: $orange;
+        }
+
+        &.right {
+            justify-content: end;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                width: 6rem;
+                height: 1rem;
+                background: $orange;
+            }
+        }
     }
+
 
     .filled-button {
         background: $orange;
@@ -209,6 +235,16 @@ footer ul {
         text-decoration: none;
         text-transform: capitalize;
         padding: .5rem;
+    }
+
+    .filledbutton, .white {
+            color: $black;
+            background: $white;
+    }
+
+    .underlined-orange {
+        color: $orange;
+        text-transform: capitalize;
     }
 
     /* WORKSHOP */
@@ -329,6 +365,10 @@ footer ul {
     align-items: center;
 }
 
+.car-inspections img{
+    width: 50%;
+}
+
 .carinspection-text {
     display: block;
     max-height: 575px;
@@ -338,18 +378,30 @@ footer ul {
     padding: 2rem 5rem;
 }
 
+.category-services {
+    padding: $main-padding;
+}
+
 .sort-buttons {
     display: flex;
     gap: 1rem;
+    justify-content: end;
 
     .filter, .sort-by {
-        border: 2px solid $orange;;
+        border: 2px solid $orange;
+        list-style-type: none;
+    }
+
+    ul.filter, ul.sort-by {
+        padding: .5rem 1rem;
+        font-family: $h1-font;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 }
 
 .category-servicecards {
     display: block;
-    padding: $main-padding;
 }
 
 .category-solo-card {
@@ -403,6 +455,7 @@ footer ul {
 
 .owners-about {
     padding: $main-padding;
+    padding-bottom: 2.5rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -416,10 +469,13 @@ footer ul {
 .about-owners-image {
     max-height: 50%;
     width: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .business-text {
     padding: $main-padding;
+    padding-top: 2.5rem;
 }
     
 .split-paragraph {

@@ -6,6 +6,7 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #EAEEF2;
 }
 
 h1 {
@@ -37,7 +38,7 @@ h4 {
 p {
   font-family: "Karla";
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 li {
@@ -46,7 +47,7 @@ li {
 }
 
 a {
-  font-family: "Hammersmith One";
+  font-family: "Karla";
   font-size: 1rem;
 }
 
@@ -85,6 +86,39 @@ nav img {
   width: auto;
 }
 
+.discountcontent {
+  width: 1920px;
+  overflow: hidden;
+  background-color: #1D190E;
+  color: #ffffff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-family: "Karla";
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-loop 30s linear infinite;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-right: 100px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 /* FOOTER */
 .footer {
   background-color: #1D190E;
@@ -135,6 +169,7 @@ footer ul {
   font-weight: bold;
   text-transform: capitalize;
   padding: 2rem 0;
+  margin: 0;
   display: flex;
   align-items: center;
 }
@@ -240,6 +275,14 @@ footer ul {
 }
 
 /* SERVICES PAGE */
+#header-services {
+  background-image: url(/images/services/service-header.jpg);
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+}
+
 #customer-favorites {
   padding: 5.3125rem 10rem;
   display: flex;
@@ -274,17 +317,64 @@ footer ul {
   padding: 2rem 5rem;
 }
 
-.category-servicecards {
+.sort-buttons {
   display: flex;
+  gap: 1rem;
+}
+.sort-buttons .filter, .sort-buttons .sort-by {
+  border: 2px solid #AE330C;
+}
+
+.category-servicecards {
+  display: block;
+  padding: 5.3125rem 10rem;
+}
+
+.category-solo-card {
+  gap: 1rem;
+  width: 100%;
+  max-height: 342px;
+}
+
+.category-solo-card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .category-solocard-text {
   background-color: #20352C;
   color: #ffffff;
+  margin: 0;
+  padding: 1rem;
+  gap: 1rem;
   display: block;
+  text-transform: capitalize;
+}
+
+.category-solocard-image {
+  max-height: 270px;
+  width: auto;
+}
+
+.top-row, .bottom-row {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+  gap: 1rem;
 }
 
 /* ABOUT */
+#header-about {
+  background-image: url(/images/about/about-header.jpg);
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+}
+
 .owner-header {
   background-image: url(/images/background-vector-tires.png);
   background-position: center;
@@ -303,6 +393,11 @@ footer ul {
   display: block;
 }
 
+.about-owners-image {
+  max-height: 50%;
+  width: auto;
+}
+
 .business-text {
   padding: 5.3125rem 10rem;
 }
@@ -310,4 +405,145 @@ footer ul {
 .split-paragraph {
   display: flex;
   gap: 5rem;
+}
+
+.quotes-background {
+  background-color: #20352C;
+  color: #ffffff;
+}
+
+.quotes {
+  padding: 0 10rem 2.6563rem 10rem;
+  color: #ffffff;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.how-contact {
+  padding: 5.3125rem 10rem 5.3125rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-business-image {
+  max-height: 50%;
+  width: auto;
+}
+
+/* CONTACT PAGE */
+#header-contact {
+  background-image: url(/images/contact/contact-header.jpg);
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.draft-email {
+  font-family: "Karla";
+}
+.draft-email .inquiries {
+  padding: 5.3125rem 10rem;
+  margin: 0 auto;
+}
+
+.note-dropper h4 {
+  font-style: italic;
+}
+
+.note-dropper {
+  border: #20352C 1rem;
+  border-top: 2px solid #20352C;
+  border-bottom: 2px solid #20352C;
+  display: block;
+}
+.note-dropper summary {
+  padding: 0.9rem 0;
+  font-weight: bold;
+  font-style: italic;
+}
+.note-dropper ul {
+  padding: 0 1.2rem 0.9rem 1.7rem;
+}
+.note-dropper li {
+  margin-bottom: 0.8rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1.2rem 0;
+}
+.field label {
+  margin: 1rem 0;
+}
+.field input {
+  height: 2.5rem;
+  border: 2px solid #20352C;
+}
+
+.message-text {
+  width: 100%;
+  height: 10.625rem;
+  padding: 1rem;
+  border: 2px solid #20352C;
+}
+
+.enter-name {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.enter-name .field {
+  width: 50%;
+}
+
+.agreement-terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.56rem 0;
+}
+
+input:focus, textarea:focus {
+  border-color: #AE330C;
+  box-shadow: #1D190E;
+}
+
+.faq {
+  padding: 5.3125rem 10rem;
+  background-color: #20352C;
+  color: #ffffff;
+  font-family: "Karla";
+}
+.faq .faq-questions {
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #ffffff;
+}
+.faq .bottom {
+  border-bottom: none;
+}
+.faq details summary {
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+.faq details summary::-webkit-details-marker {
+  display: none;
+}
+.faq details summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.faq details[open] summary::after {
+  content: "-";
+}
+
+.location {
+  display: flex;
+  padding: 5.3125rem 10rem;
 }/*# sourceMappingURL=style.css.map */

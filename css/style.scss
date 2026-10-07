@@ -2,11 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Karla:ital,wght@0,200..800;1,200..800&family=Oswald:wght@200..700&display=swap');
 
+$background-color: #EAEEF2;
 $green: #20352C;
 $orange: #AE330C;
 $white: #ffffff;
 $black: #1D190E;
 
+$main-padding: 5.3125rem 10rem;
+
+$map-height: 770px;
+
+$h1-font: 'Hammersmith One';
+$h2-font: 'Hammersmith One';
+$h3-font: 'Karla';
+$h4-font: 'Karla';
+$p-font: 'Karla';
 
 
 /* —— DESKTOP —— */
@@ -14,10 +24,11 @@ $black: #1D190E;
 body {
     padding: 0;
     margin: 0;
+    background-color: $background-color;
 }
 
 h1 {
-    font-family: 'Hammersmith One';
+    font-family: $h1-font;
     font-size: 5.75rem;
     text-transform: uppercase;
     color: $white;
@@ -25,36 +36,36 @@ h1 {
 }
 
 h2 {
-    font-family: 'Hammersmith One';
+    font-family: $h2-font;
     font-size: 3rem;
     text-transform: uppercase;
 }
 
 h3 {
-    font-family: 'Karla';
+    font-family: $h3-font;
     font-size: 1.125rem;
     font-weight: 300;
 }
 
 h4 {
-    font-family: 'Karla';
+    font-family: $h4-font;
     font-size: 1rem;
     font-weight: 400;
 }
 
 p {
-    font-family: 'Karla';
+    font-family: $p-font;
     font-size: .8rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 li {
-    font-family: 'Karla';
+    font-family: $p-font;
     font-size: .8rem;
 }
 
 a {
-    font-family: 'Hammersmith One';
+    font-family: $h4-font;
     font-size: 1rem;
 }
 
@@ -92,6 +103,40 @@ nav a {
 nav img {
     height: 50px;
     width: auto;
+}
+
+.discountcontent {
+    width: 1920px;
+    overflow: hidden;
+    background-color: $black;
+    color: $white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: $p-font;
+    position: relative;
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-loop 30s linear infinite;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-right: 100px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+  
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* FOOTER */
@@ -145,6 +190,7 @@ footer ul {
         font-weight: bold;
         text-transform: capitalize;
         padding: 2rem 0;
+        margin: 0;
         display: flex;
         align-items: center;
     }
@@ -168,7 +214,7 @@ footer ul {
     /* WORKSHOP */
 
     #workshop {
-        padding: 5.3125rem 10rem;
+        padding: $main-padding;
         display: flex;
         gap: 1rem;
         justify-content: center;
@@ -225,7 +271,7 @@ footer ul {
     }
 
     .buyers-section, .services-section{
-        padding: 5.3125rem 10rem;
+        padding: $main-padding;
         display: block;
         justify-content: center;
         align-content: center;
@@ -249,9 +295,16 @@ footer ul {
     }
 
 /* SERVICES PAGE */
+#header-services {
+    background-image: url(/images/services/service-header.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+}
 
 #customer-favorites {
-    padding: 5.3125rem 10rem;
+    padding: $main-padding;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -285,17 +338,63 @@ footer ul {
     padding: 2rem 5rem;
 }
 
-.category-servicecards {
+.sort-buttons {
     display: flex;
+    gap: 1rem;
+
+    .filter, .sort-by {
+        border: 2px solid $orange;;
+    }
+}
+
+.category-servicecards {
+    display: block;
+    padding: $main-padding;
+}
+
+.category-solo-card {
+    gap: 1rem;
+    width: 100%;
+    max-height: 342px;
+}
+
+.category-solo-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .category-solocard-text {
     background-color: $green;
     color: $white;
+    margin: 0;
+    padding: 1rem;
+    gap: 1rem;
     display: block;
+    text-transform: capitalize;
+}
+
+.category-solocard-image {
+    max-height: 270px;
+    width: auto;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    gap: 1rem;
 }
 
 /* ABOUT */
+#header-about{
+    background-image: url(/images/about/about-header.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+}
 .owner-header {
     background-image: url(/images/background-vector-tires.png);
     background-position: center;
@@ -303,7 +402,7 @@ footer ul {
 }
 
 .owners-about {
-    padding: 5.3125rem 10rem;
+    padding: $main-padding;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -314,11 +413,176 @@ footer ul {
     display:block;
 }
 
+.about-owners-image {
+    max-height: 50%;
+    width: auto;
+}
+
 .business-text {
-    padding: 5.3125rem 10rem;
+    padding: $main-padding;
 }
     
 .split-paragraph {
     display: flex;
     gap: 5rem;
+}
+
+.quotes-background {
+    background-color: $green;
+    color: $white;
+}
+
+.quotes {
+    padding: 0 10rem 2.6563rem 10rem;
+    color: $white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.how-contact {
+    padding: 5.3125rem 10rem 5.3125rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-business-image {
+    max-height: 50%;
+    width: auto;
+}
+
+/* CONTACT PAGE */
+
+#header-contact {
+    background-image: url(/images/contact/contact-header.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.draft-email {
+    font-family: 'Karla';
+
+    .inquiries {
+        padding: $main-padding;
+        margin: 0 auto;
+    }
+}
+
+
+.note-dropper h4 {
+    font-style: italic;
+}
+
+.note-dropper {
+    border: $green 1rem;
+    border-top: 2px solid $green;
+    border-bottom: 2px solid $green;
+    display: block;
+
+    summary {
+        padding: .9rem 0;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    ul {
+        padding: 0 1.2rem .9rem 1.7rem;
+    }
+
+    li {
+        margin-bottom: .8rem;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1.2rem 0;
+
+    label {
+        margin: 1rem 0;
+    }
+
+    input {
+        height: 2.5rem;
+        border: 2px solid $green;
+    }
+}
+
+.message-text {
+    width: 100%;
+    height: 10.625rem;
+    padding: 1rem;
+    border: 2px solid $green;
+}
+
+.enter-name {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+
+    .field {
+        width: 50%;
+    }
+}
+
+.agreement-terms {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 0 1.56rem 0;
+}
+
+input:focus, textarea:focus {
+    border-color: $orange;
+    box-shadow: $black;
+}
+
+.faq {
+    padding: $main-padding;
+    background-color: $green;
+    color: $white;
+    font-family: 'Karla';
+
+    .faq-questions {
+        padding: 2rem 1rem;
+        border-bottom: 2px solid $white;
+    }
+
+    .bottom {
+        border-bottom: none;
+    }
+
+    details {
+        summary {
+            list-style: none;
+            position: relative;
+            padding-right: 2rem;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &::after {
+                content: "+";
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        &[open] {
+            summary::after {
+                content: "-";
+            }
+        }
+    }
+}
+
+.location {
+    display: flex;
+    padding: $main-padding;
 }

@@ -21,6 +21,8 @@ h2 {
   font-family: "Hammersmith One";
   font-size: 3rem;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 h3 {
@@ -113,7 +115,6 @@ nav img {
   white-space: nowrap;
   animation: scroll-loop 30s linear infinite;
 }
-
 .marquee span {
   display: inline-block;
   padding-right: 100px;
@@ -134,34 +135,52 @@ nav img {
   background-color: #1D190E;
   color: #ffffff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 5rem;
   gap: 2.5rem;
 }
-
-.footer-left {
+.footer .footer-left {
   display: block;
   width: 38.75rem;
   height: auto;
 }
-
-.footer-right {
-  display: block;
-}
-
-footer ul {
+.footer .footer-right {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   list-style-type: none;
   color: #ffffff;
   padding: 1.5rem 0;
   margin: 0;
-  gap: 3rem;
+  gap: 0.75rem;
+}
+.footer ul.termsconditions {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.footer .minipage {
+  color: #BDBDBD;
+  font-weight: 100;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .social-media {
   display: flex;
+  align-items: flex-end;
   gap: 2.5rem;
 }
 
@@ -236,6 +255,7 @@ footer ul {
 
 .workshop-images {
   display: block;
+  justify-content: end;
 }
 
 /* OWNERS */
@@ -245,16 +265,20 @@ footer ul {
   justify-content: center;
   align-items: center;
 }
-
-.owners-image {
-  width: 58rem;
+.owners .owners-image img {
+  width: 100%;
   height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.owners-text {
+.owners .owners-text {
   background-color: #20352C;
   color: #ffffff;
-  padding: 2rem 5rem;
+  padding: 3rem 0.75rem;
+}
+.owners .image-text {
+  display: none;
 }
 
 /* SERVICES */
@@ -337,6 +361,8 @@ footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 36rem;
+  width: auto;
 }
 
 .car-inspections img {

@@ -7,6 +7,7 @@ $green: #20352C;
 $orange: #AE330C;
 $white: #ffffff;
 $black: #1D190E;
+$grey: #BDBDBD;
 
 $main-padding: 5.3125rem 10rem;
 
@@ -18,8 +19,9 @@ $h3-font: 'Karla';
 $h4-font: 'Karla';
 $p-font: 'Karla';
 
+@media screen (min-width: 1440px) {
 
-/* —— DESKTOP —— */
+    /* —— DESKTOP —— */
 
 body {
     padding: 0;
@@ -39,6 +41,8 @@ h2 {
     font-family: $h2-font;
     font-size: 3rem;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
 h3 {
@@ -131,13 +135,13 @@ nav img {
     display: flex;
     white-space: nowrap;
     animation: scroll-loop 30s linear infinite;
-}
 
-.marquee span {
-    display: inline-block;
-    padding-right: 100px;
-    font-size: 20px;
-    letter-spacing: 1px;
+    span {
+        display: inline-block;
+        padding-right: 100px;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
 }
   
 @keyframes scroll-loop {
@@ -154,35 +158,59 @@ nav img {
     background-color: $black;
     color: $white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 5rem;
     gap: 2.5rem;
-}
 
-.footer-left {
-    display: block;
-    width: 38.75rem;
-    height: auto;
-}
+    .footer-left {
+        display: block;
+        width: 38.75rem;
+        height: auto;
+    }
 
-.footer-right {
-    display: block;
+    .footer-right {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 4rem;
+    }
 
-}
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        list-style-type: none;
+        color: $white;
+        padding: 1.5rem 0;
+        margin: 0;
+        gap: .75rem;
+    }
 
-footer ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style-type: none;
-    color: $white;
-    padding: 1.5rem 0;
-    margin: 0;
-    gap: 3rem;
+    ul.termsconditions {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .minipage {
+        color: $grey;
+        font-weight: 100;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .social-media {
     display: flex;
+    align-items: flex-end;
     gap: 2.5rem;
 }
 
@@ -263,6 +291,7 @@ footer ul {
 
     .workshop-images {
         display: block;
+        justify-content: end;
     }
 
     /* OWNERS */
@@ -271,17 +300,23 @@ footer ul {
         gap: 1rem;
         justify-content: center;
         align-items: center;
-    }
 
-    .owners-image {
-        width: 58rem;
-        height: auto;
-    }
+        .owners-image img{
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
 
-    .owners-text {
-        background-color: $green;
-        color: $white;
-        padding: 2rem 5rem;
+        .owners-text {
+            background-color: $green;
+            color: $white;
+            padding: 3rem .75rem;
+        }
+
+        .image-text {
+            display: none;
+        }
     }
 
     /* SERVICES */
@@ -363,6 +398,8 @@ footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 36rem;
+    width: auto;
 }
 
 .car-inspections img{
@@ -641,4 +678,32 @@ input:focus, textarea:focus {
 .location {
     display: flex;
     padding: $main-padding;
+}
+
+}
+
+
+@media screen (max-width: 500px) {
+    /* MOBILE */
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: .70rem;
+    }
+
+    h4 {
+        font-size: .6rem;
+    }
+
+    p {
+        font-size: .6rem;
+    }
+
 }

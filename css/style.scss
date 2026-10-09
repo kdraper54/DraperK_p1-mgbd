@@ -19,7 +19,644 @@ $h3-font: 'Karla';
 $h4-font: 'Karla';
 $p-font: 'Karla';
 
-@media screen (min-width: 1440px) {
+@media (max-width: 600px) {
+/* MOBILE */
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        color: $white;
+        text-transform: uppercase;
+        font-family: $h1-font;
+        display: flex;
+        justify-content: center;
+        padding: 5rem;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-family: $h2-font;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: .70rem;
+        font-family: $h3-font;
+        margin: 0;
+        font-weight: 400;
+        line-height: 1rem;
+    }
+
+    h4 {
+        font-size: .6rem;
+        font-family: $h4-font;
+        font-weight: 200;
+    }
+
+    p, li {
+        font-size: .6rem;
+        font-family: $p-font;
+        padding: 1rem 0;
+        line-height: 1rem;
+        margin: 0;
+        font-weight: 200;
+    }
+
+/* NAVIGATION */
+
+    nav ul{
+        background-color: $green;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white;
+        padding: 1.5rem 2.5rem;
+        margin: 0;
+
+        li {
+            display: none;
+        }
+
+        img {
+            width: 25%;
+            height: auto;
+        }
+
+        .hamburger-menu {
+            width: 2rem;
+        }
+    }
+
+.discountcontent {
+    width: 100%;
+    overflow: hidden;
+    background-color: $black;
+    color: $white;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    font-family: $p-font;
+    position: relative;
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-loop 20s linear infinite;
+
+    span {
+        display: inline-block;
+        font-size: 25%;
+        gap: 1rem;
+    }
+}
+
+/* FOOTER */
+    .footer {
+        background-color: $black;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+        text-align: center;
+    
+        .footer-left, .footer-right {
+            display: block;
+            width: 16rem;
+            height: auto;
+            align-items: center;
+            text-align: center;
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            color: $white;
+            padding: 1.5rem 0;
+            margin: 0;
+            gap: .75rem;
+            text-align: center;
+        }
+    
+        ul.termsconditions {
+            display: block;
+            gap: 5rem;
+        }
+    
+        .minipage {
+            color: $grey;
+            font-weight: 100;
+        }
+    
+        a {
+            color: $white;
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+    
+    .social-media {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.5rem;
+        padding: 1rem;
+    }
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+      }
+    100% {
+        transform: translateX(-50%);
+      }
+}
+
+/* HOME */
+
+
+#header {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../images/home/mgbd-header.jpg");
+    background-size: cover;
+    height: 100%;
+    width: auto;
+}
+
+.mobile-hidden {
+    display: none;
+}
+
+.filled-button {
+    background: $orange;
+    font-weight: 400;
+    color: $white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .5rem;
+    margin: 1rem 0;
+    font-family: $h1-font;
+}
+
+.filledbutton, .white {
+    color: $black;
+    background: $white;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.underlined-orange {
+    color: $orange;
+    text-transform: capitalize;
+    font-family: $p-font;
+}
+
+.underlined-greenbg {
+    font-size: .8rem;
+}
+
+.underlined-nav {
+    color: $black;
+    font-family: $p-font;
+    text-transform: capitalize;
+}
+
+.workshop-images {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+
+    .mainworkshop {
+        width: 30rem;
+        display: block;
+        justify-content: center;
+        padding: 2.5rem;
+    }
+
+    .stacked {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0 2.5rem;
+    }
+}
+
+#workshop {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .workshop-text {
+        padding: 1.5rem 2.5rem;
+    }
+
+}
+
+.owners {
+    background-color: $green;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+    padding: 0 2rem;
+    
+    img {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .owners-text {
+        padding: .5rem 0 2rem 0;
+    }
+}
+
+    .ourservices {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .services-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+
+        a {
+            color: $white;
+            font-family: $p-font;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .buyers-section, .services-section{
+        padding: 1rem 2rem;
+        display: block;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .solo-card {
+        background-color: $green;
+        color: $white;
+        padding: 1rem;
+        display: block;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 50%;
+        max-height: auto;
+
+        img {
+            height: 10.3rem;
+            width: 16rem;
+            object-fit: cover;
+        }
+    }
+
+    .service-image {
+        width: 100%;
+        max-height: 32rem;
+        object-fit: cover;
+    }
+
+/* SERVICES PAGE */
+#header-services {
+    background-image: url('/images/services/servicesheader-hero.jpg');
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+.customer-text {
+    padding: 0 2.5rem;
+}
+
+.small-cards {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem 4.5rem;
+    margin: 0;
+
+    a {
+        color: $white;
+        font-family: $p-font;
+    }
+}
+
+.car-inspections {
+    background: $green;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2.5rem;
+
+    img {
+        width: 100%;
+        height: 9.68rem;
+        object-fit: cover;
+        padding: 1rem 0;
+    }
+
+    .filled-button, .white {
+        background-color: $white;
+        color: $black;
+        margin: 2rem 0;
+    }
+}
+
+.category-services {
+    padding: 0 2.5rem;
+}
+
+.sort-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+
+    .filter, .sort-by {
+        border: 2px solid $orange;
+        list-style-type: none;
+    }
+
+    ul.filter, ul.sort-by {
+        padding: 0 1rem;
+        font-family: $h1-font;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.category-servicecards {
+    display: block;
+}
+
+.category-solo-card {
+    gap: 1rem;
+    width: 100%;
+    max-height: 342px;
+
+    &:hover {
+        padding: .5rem;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .polishing {
+        object-fit: cover;
+    }
+}
+
+.category-solocard-text {
+    background-color: $green;
+    color: $white;
+    margin: 0;
+    padding: 1rem;
+    gap: 1rem;
+    display: block;
+    text-transform: capitalize;
+}
+
+.category-solocard-image {
+    max-height: 270px;
+    width: auto;
+    object-fit: cover;
+}
+
+.top-row, .bottom-row {
+    display: grid;
+    padding: .5rem 0;
+    gap: 1rem;
+}
+
+/* ABOUT */
+#header-about {
+    background-image: url('/images/about/about-header.jpg');
+    background-size: cover;
+}
+
+.owner-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.owners-about, .business-text {
+    padding: 0 2.5rem;
+}
+
+.about-owners-image img{
+    width: 75%;
+    height: auto;
+    padding: 1.5rem 2.5rem 0 2.5rem;
+}
+
+.quotes {
+    background: $green;
+    color: $white;
+    padding: 3rem 2.5rem;
+    margin: 2rem 0;
+}
+
+.how-contact {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2.5rem;
+
+        img {
+            width: 50%;
+        }
+}
+
+/* CONTACT */
+#header-contact {
+    background-image: url('/images/contact/contact-header.jpg');
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+.draft-email {
+    font-family: 'Karla';
+
+    .inquiries {
+        padding: 1rem 2.5rem;
+        margin: 0 auto;
+    }
+}
+
+
+.note-dropper h4 {
+    font-style: italic;
+}
+
+.note-dropper {
+    border: $green 1rem;
+    border-top: 2px solid $green;
+    border-bottom: 2px solid $green;
+    display: block;
+
+    summary {
+        padding: .9rem 0;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    ul {
+        padding: 0 1.2rem .9rem 1.7rem;
+    }
+
+    li {
+        margin-bottom: .8rem;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1.2rem 0;
+
+    label {
+        margin: 1rem 0;
+    }
+
+    input {
+        height: 2.5rem;
+        border: 2px solid $green;
+    }
+}
+
+.message-text {
+    width: 92%;
+    height: 10.625rem;
+    padding: 1rem;
+    border: 2px solid $green;
+}
+
+.enter-name {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+
+    .field {
+        width: 50%;
+    }
+}
+
+.agreement-terms {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 0 1.56rem 0;
+}
+
+input:focus, textarea:focus {
+    border-color: $orange;
+    box-shadow: $black;
+}
+
+.faq {
+    padding: 1rem 2.5rem;
+    background-color: $green;
+    color: $white;
+    font-family: 'Karla';
+
+    .faq-questions {
+        padding: 2rem 1rem;
+        border-bottom: 2px solid $white;
+    }
+
+    .bottom {
+        border-bottom: none;
+    }
+
+    details {
+        summary {
+            list-style: none;
+            position: relative;
+            padding-right: 2rem;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &::after {
+                content: "+";
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        &[open] {
+            summary::after {
+                content: "-";
+            }
+        }
+    }
+}
+
+.location {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 2.5rem;
+    gap: 2rem;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit:contain;
+    }
+}
+
+}
+
+
+
+@media (min-width: 1440px) {
 
     /* —— DESKTOP —— */
 
@@ -679,31 +1316,5 @@ input:focus, textarea:focus {
     display: flex;
     padding: $main-padding;
 }
-
-}
-
-
-@media screen (max-width: 500px) {
-    /* MOBILE */
-
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: .70rem;
-    }
-
-    h4 {
-        font-size: .6rem;
-    }
-
-    p {
-        font-size: .6rem;
-    }
 
 }

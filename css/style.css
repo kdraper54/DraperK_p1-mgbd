@@ -36,13 +36,23 @@
     font-family: "Karla";
     font-weight: 200;
   }
-  p, li {
+  p {
     font-size: 0.6rem;
     font-family: "Karla";
     padding: 1rem 0;
     line-height: 1rem;
     margin: 0;
     font-weight: 200;
+  }
+  p.italic {
+    font-style: italic;
+    padding: 0;
+    font-weight: 500;
+  }
+  li {
+    font-family: "Karla";
+    font-size: 0.6rem;
+    line-height: 1rem;
   }
   /* NAVIGATION */
   nav ul {
@@ -660,6 +670,9 @@
     width: 38.75rem;
     height: auto;
   }
+  .footer .footer-left img {
+    width: 50%;
+  }
   .footer .footer-right {
     display: flex;
     flex-wrap: wrap;
@@ -770,21 +783,21 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    background-color: #20352C;
+    height: 22.5rem;
+    margin: 5rem 0;
   }
   .owners .owners-image img {
     width: 100%;
     height: auto;
     display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
+  }
+  .owners .owners-image img .image-text {
+    bottom: 50%;
   }
   .owners .owners-text {
-    background-color: #20352C;
     color: #ffffff;
     padding: 3rem 0.75rem;
-  }
-  .owners .image-text {
-    display: none;
   }
   /* SERVICES */
   .ourservices {

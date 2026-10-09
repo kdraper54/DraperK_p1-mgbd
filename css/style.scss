@@ -59,14 +59,27 @@ $p-font: 'Karla';
         font-weight: 200;
     }
 
-    p, li {
+    p{
         font-size: .6rem;
         font-family: $p-font;
         padding: 1rem 0;
         line-height: 1rem;
         margin: 0;
         font-weight: 200;
+
+        &.italic {
+            font-style: italic;
+            padding: 0;
+            font-weight: 500;
+        }
     }
+
+    li {
+        font-family: $p-font;
+        font-size: .6rem;
+        line-height: 1rem;
+    }
+
 
 /* NAVIGATION */
 
@@ -655,7 +668,6 @@ input:focus, textarea:focus {
 }
 
 
-
 @media (min-width: 1440px) {
 
     /* —— DESKTOP —— */
@@ -803,6 +815,10 @@ nav img {
         display: block;
         width: 38.75rem;
         height: auto;
+        
+        img {
+            width: 50%;
+        }
     }
 
     .footer-right {
@@ -937,23 +953,26 @@ nav img {
         gap: 1rem;
         justify-content: center;
         align-items: center;
+        background-color: $green;
+        height: 22.5rem;
+        margin: 5rem 0;
 
         .owners-image img{
             width: 100%;
             height: auto;
             display: block;
-            object-fit: cover;
+
+            .image-text {
+                bottom: 50%;
+            }
         }
 
         .owners-text {
-            background-color: $green;
             color: $white;
             padding: 3rem .75rem;
         }
 
-        .image-text {
-            display: none;
-        }
+        
     }
 
     /* SERVICES */

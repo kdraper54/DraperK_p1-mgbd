@@ -787,13 +787,27 @@
     height: 22.5rem;
     margin: 5rem 0;
   }
-  .owners .owners-image img {
+  .owners img {
     width: 100%;
     height: auto;
+    border: #20352C 0.5rem solid;
+    clip-path: polygon(0 0, 82% 0, 82% 0, 82% 0, 100% 100%, 0 100%);
+  }
+  .owners #text-overlay {
     display: block;
   }
-  .owners .owners-image img .image-text {
-    bottom: 50%;
+  .owners .image-text {
+    background-color: #ffffff;
+    position: relative;
+    padding: 0.2rem 2rem;
+    margin: 0 0.5rem;
+    bottom: 5.5rem;
+    opacity: 75%;
+    clip-path: polygon(0 0, 98% 0, 98% 0, 98% 0, 100% 100%, 0 100%);
+  }
+  .owners .image-text.italic {
+    text-align: right;
+    font-style: italic;
   }
   .owners .owners-text {
     color: #ffffff;

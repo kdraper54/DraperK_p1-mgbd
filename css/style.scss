@@ -957,13 +957,43 @@ nav img {
         height: 22.5rem;
         margin: 5rem 0;
 
-        .owners-image img{
+        img {
             width: 100%;
             height: auto;
-            display: block;
+            border: $green .5rem solid;
+            clip-path: polygon(
+                0 0,
+                82% 0,
+                82% 0,
+                82% 0,
+                100% 100%,
+                0 100%
+            );
+        }
 
-            .image-text {
-                bottom: 50%;
+        #text-overlay {
+            display: block;
+        }
+
+        .image-text {
+            background-color: $white;
+            position: relative;
+            padding: .2rem 2rem;
+            margin: 0 .5rem;
+            bottom: 5.5rem;
+            opacity: 75%;
+            clip-path: polygon(
+                0 0,
+                98% 0,
+                98% 0,
+                98% 0,
+                100% 100%,
+                0 100%
+            );
+
+            &.italic {
+                text-align: right;
+                font-style: italic;
             }
         }
 

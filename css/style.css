@@ -2,12 +2,14 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Karla:ital,wght@0,200..800;1,200..800&family=Oswald:wght@200..700&display=swap");
-@media (max-width: 600px) {
-  /* MOBILE */
-  body {
-    padding: 0;
-    margin: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EAEEF2;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  /* —— MOBILE —— */
   h1 {
     font-size: 1.75rem;
     color: #ffffff;
@@ -40,14 +42,14 @@
     font-size: 0.6rem;
     font-family: "Karla";
     padding: 1rem 0;
-    line-height: 1rem;
+    line-height: 0.6rem;
     margin: 0;
-    font-weight: 200;
+    font-weight: 100;
   }
   p.italic {
     font-style: italic;
-    padding: 0;
-    font-weight: 500;
+    padding: 1rem 0;
+    font-weight: 200;
   }
   li {
     font-family: "Karla";
@@ -169,15 +171,16 @@
   .mobile-hidden {
     display: none;
   }
-  .filled-button {
+  a.filled-button {
     background: #AE330C;
     font-weight: 400;
     color: #ffffff;
     text-decoration: none;
     text-transform: capitalize;
     padding: 0.5rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     font-family: "Hammersmith One";
+    font-size: 0.6rem;
   }
   .filledbutton, .white {
     color: #1D190E;
@@ -236,6 +239,7 @@
   .owners img {
     width: 100%;
     padding: 1rem 0;
+    content: url(../images/home/owners-rect-image.jpg);
   }
   .owners .owners-text {
     padding: 0.5rem 0 2rem 0;
@@ -410,7 +414,7 @@
     align-items: center;
   }
   .owners-about, .business-text {
-    padding: 0 2.5rem;
+    padding: 1rem 2.5rem;
   }
   .about-owners-image img {
     width: 75%;
@@ -545,11 +549,594 @@
        object-fit: contain;
   }
 }
-@media (min-width: 1440px) {
-  /* —— DESKTOP —— */
-  body {
+@media (min-width: 601px) and (max-width: 900px) {
+  /* —— TABLET —— */
+  h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Hammersmith One";
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    margin: 0;
+  }
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Hammersmith One";
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1rem;
+    font-family: "Karla";
+    margin: 0;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+    font-family: "Karla";
+    font-weight: 200;
+  }
+  p {
+    font-size: 0.8rem;
+    font-family: "Karla";
+    padding: 1rem 0;
+    line-height: 1rem;
+    margin: 1rem 0;
+    font-weight: 200;
+  }
+  p.italic {
+    font-style: italic;
+    padding: 0;
+    font-weight: 200;
+  }
+  li {
+    font-family: "Karla";
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+  }
+  /* NAVIGATION */
+  nav ul {
+    background-color: #20352C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    margin: 0;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    font-weight: bold;
+  }
+  nav ul img {
+    width: 5rem;
+    height: auto;
+  }
+  nav ul .hamburger-menu {
+    display: none;
+  }
+  .discountcontent {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1D190E;
+    color: #ffffff;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    font-family: "Karla";
+    position: relative;
+  }
+  .marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-loop 20s linear infinite;
+  }
+  .marquee span {
+    display: inline-block;
+    font-size: 25%;
+    gap: 1rem;
+  }
+  /* FOOTER */
+  .footer {
+    background-color: #1D190E;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .footer .footer-left, .footer .footer-right {
+    display: block;
+    width: 16rem;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    margin: 0;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  .footer ul.termsconditions {
+    display: block;
+    gap: 5rem;
+  }
+  .footer .minipage {
+    color: #BDBDBD;
+    font-weight: 100;
+  }
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer img {
+    width: 50%;
+  }
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 2.5rem;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  @keyframes scroll-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  /* HOME */
+  #header {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../images/home/mgbd-header.jpg");
+    background-size: cover;
+    height: 100%;
+    width: auto;
+  }
+  .divider-tag {
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .divider-tag::before {
+    content: "";
+    width: 6rem;
+    height: 1rem;
+    background: #AE330C;
+  }
+  .divider-tag.right {
+    justify-content: end;
+  }
+  .divider-tag.right::before {
+    display: none;
+  }
+  .divider-tag.right::after {
+    content: "";
+    width: 6rem;
+    height: 1rem;
+    background: #AE330C;
+  }
+  .filled-button {
+    background: #AE330C;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    font-family: "Hammersmith One";
+  }
+  .filledbutton, .white {
+    color: #1D190E;
+    background: #ffffff;
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  .underlined-orange {
+    color: #AE330C;
+    text-transform: capitalize;
+    font-family: "Karla";
+  }
+  .underlined-greenbg {
+    font-size: 0.8rem;
+  }
+  .underlined-nav {
+    color: #1D190E;
+    font-family: "Karla";
+    text-transform: capitalize;
+  }
+  .workshop-images {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+  }
+  .workshop-images .mainworkshop {
+    width: 350%;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem;
+  }
+  .workshop-images .stacked {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0 2.5rem;
+  }
+  .workshop-images .stacked img {
+    width: 100%;
+  }
+  #workshop {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+  #workshop .workshop-text {
+    padding: 1.5rem 2.5rem;
+  }
+  .owners {
+    background-color: #20352C;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 2rem;
+  }
+  .owners img {
+    width: 100%;
+    padding: 1rem 0;
+    content: url(../images/home/owners-rect-image.jpg);
+  }
+  .owners .owners-text {
+    padding: 0.5rem 0 2rem 0;
+  }
+  .ourservices {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .services-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+  }
+  .services-cards a {
+    color: #ffffff;
+    font-family: "Karla";
+    text-decoration: none;
+  }
+  .services-cards a:hover {
+    font-weight: bold;
+  }
+  .buyers-section, .services-section {
+    padding: 1rem 2rem;
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+  .solo-card {
+    background-color: #20352C;
+    color: #ffffff;
+    padding: 1rem;
+    display: block;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 35%;
+    max-height: auto;
+  }
+  .solo-card img {
+    height: 18.3rem;
+    width: 14rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .service-image {
+    width: 75%;
+    max-height: 32rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* SERVICES PAGE */
+  #header-services {
+    background-image: url("/images/services/servicesheader-hero.jpg");
+    height: 100%;
     padding: 0;
     margin: 0;
+    background-size: cover;
+  }
+  .customer-text {
+    padding: 0 2.5rem;
+  }
+  .small-cards {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem 4.5rem;
+    margin: 0;
+  }
+  .small-cards a {
+    color: #ffffff;
+    font-family: "Karla";
+  }
+  .small-cards .service-image {
+    width: 100%;
+    max-height: 6.25rem;
+  }
+  .car-inspections {
+    background: #20352C;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2.5rem;
+  }
+  .car-inspections img {
+    width: 100%;
+    height: 9.68rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 1rem 0;
+  }
+  .car-inspections .filled-button, .car-inspections .white {
+    background-color: #ffffff;
+    color: #1D190E;
+    margin: 2rem 0;
+  }
+  .category-services {
+    padding: 0 2.5rem;
+  }
+  .sort-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+  }
+  .sort-buttons .filter, .sort-buttons .sort-by {
+    border: 2px solid #AE330C;
+    list-style-type: none;
+  }
+  .sort-buttons ul.filter, .sort-buttons ul.sort-by {
+    padding: 0 1rem;
+    font-family: "Hammersmith One";
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .category-servicecards {
+    display: block;
+  }
+  .category-solo-card {
+    gap: 1rem;
+    width: 100%;
+    max-height: 342px;
+  }
+  .category-solo-card:hover {
+    padding: 0.5rem;
+  }
+  .category-solo-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .category-solo-card .polishing {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .category-solocard-text {
+    background-color: #20352C;
+    color: #ffffff;
+    margin: 0;
+    padding: 1rem;
+    gap: 1rem;
+    display: block;
+    text-transform: capitalize;
+  }
+  .category-solocard-image {
+    max-height: 270px;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .top-row, .bottom-row {
+    display: grid;
+    padding: 0.5rem 0;
+    gap: 1rem;
+  }
+  /* ABOUT */
+  #header-about {
+    background-image: url("/images/about/about-header.jpg");
+    background-size: cover;
+  }
+  .owner-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .owners-about, .business-text {
+    padding: 0 2.5rem;
+  }
+  .about-owners-image img {
+    width: 75%;
+    height: auto;
+    padding: 1.5rem 2.5rem 0 2.5rem;
+  }
+  .quotes {
+    background: #20352C;
+    color: #ffffff;
+    padding: 3rem 2.5rem;
+    margin: 2rem 0;
+  }
+  .how-contact {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem 2.5rem 2rem 2.5rem;
+  }
+  .how-contact img {
+    width: auto;
+    height: 100%;
+    padding: 1rem 0;
+  }
+  /* CONTACT */
+  #header-contact {
+    background-image: url("/images/contact/contact-header.jpg");
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+  }
+  .draft-email {
+    font-family: "Karla";
+  }
+  .draft-email .inquiries {
+    padding: 1rem 2.5rem;
+    margin: 0 auto;
+  }
+  .note-dropper h4 {
+    font-style: italic;
+  }
+  .note-dropper {
+    border: #20352C 1rem;
+    border-top: 2px solid #20352C;
+    border-bottom: 2px solid #20352C;
+    display: block;
+  }
+  .note-dropper summary {
+    padding: 0.9rem 0;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .note-dropper ul {
+    padding: 0 1.2rem 0.9rem 1.7rem;
+  }
+  .note-dropper li {
+    margin-bottom: 0.8rem;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1.2rem 0;
+  }
+  .field label {
+    margin: 1rem 0;
+  }
+  .field input {
+    height: 2.5rem;
+    border: 2px solid #20352C;
+  }
+  .message-text {
+    width: 92%;
+    height: 10.625rem;
+    padding: 1rem;
+    border: 2px solid #20352C;
+  }
+  .enter-name {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .enter-name .field {
+    width: 50%;
+  }
+  .agreement-terms {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1.56rem 0;
+  }
+  input:focus, textarea:focus {
+    border-color: #AE330C;
+    box-shadow: #1D190E;
+  }
+  .faq {
+    padding: 1rem 2.5rem;
+    background-color: #20352C;
+    color: #ffffff;
+    font-family: "Karla";
+  }
+  .faq .faq-questions {
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #ffffff;
+  }
+  .faq .bottom {
+    border-bottom: none;
+  }
+  .faq details summary {
+    list-style: none;
+    position: relative;
+    padding-right: 2rem;
+  }
+  .faq details summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq details summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .faq details[open] summary::after {
+    content: "-";
+  }
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 2.5rem;
+    gap: 2rem;
+  }
+  .location img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (min-width: 901px) and (max-width: 1440px) {
+  /* —— LAPTOP —— */
+  body {
     background-color: #EAEEF2;
   }
   h1 {
@@ -625,6 +1212,579 @@
   nav img {
     height: 50px;
     width: auto;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .discountcontent {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1D190E;
+    color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: "Karla";
+    position: relative;
+  }
+  .marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-loop 30s linear infinite;
+  }
+  .marquee span {
+    display: inline-block;
+    padding-right: 100px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  @keyframes scroll-loop {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  /* FOOTER */
+  .footer {
+    background-color: #1D190E;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    gap: 2.5rem;
+  }
+  .footer .footer-left {
+    display: block;
+    width: 38.75rem;
+    height: auto;
+  }
+  .footer .footer-left img {
+    width: 50%;
+  }
+  .footer .footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style-type: none;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    margin: 0;
+    gap: 0.75rem;
+  }
+  .footer ul.termsconditions {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .footer .minipage {
+    color: #BDBDBD;
+    font-weight: 100;
+  }
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .social-media {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5rem;
+  }
+  /* HOME */
+  /* HERO */
+  #header {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../images/home/mgbd-header.jpg");
+    background-size: cover;
+    height: 100%;
+  }
+  .divider-tag {
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 2rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .divider-tag::before {
+    content: "";
+    width: 6rem;
+    height: 1rem;
+    background: #AE330C;
+  }
+  .divider-tag.right {
+    justify-content: end;
+  }
+  .divider-tag.right::before {
+    display: none;
+  }
+  .divider-tag.right::after {
+    content: "";
+    width: 6rem;
+    height: 1rem;
+    background: #AE330C;
+  }
+  .filled-button {
+    background: #AE330C;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0.5rem;
+  }
+  .filledbutton, .white {
+    color: #1D190E;
+    background: #ffffff;
+  }
+  .underlined-orange {
+    color: #AE330C;
+    text-transform: capitalize;
+  }
+  /* WORKSHOP */
+  #workshop {
+    padding: 5.3125rem 10rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+  .workshop-text {
+    display: block;
+  }
+  .workshop-images {
+    display: block;
+    justify-content: end;
+  }
+  /* OWNERS */
+  .owners {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #20352C;
+    height: 22.5rem;
+    margin: 5rem 0;
+  }
+  .owners img {
+    width: 100%;
+    height: auto;
+    border: #20352C 0.5rem solid;
+    clip-path: polygon(0 0, 82% 0, 82% 0, 82% 0, 100% 100%, 0 100%);
+  }
+  .owners #text-overlay {
+    display: block;
+  }
+  .owners .image-text {
+    background-color: #ffffff;
+    position: relative;
+    padding: 0.2rem 2rem;
+    margin: 0 0.5rem;
+    bottom: 5.5rem;
+    opacity: 75%;
+    clip-path: polygon(0 0, 98% 0, 98% 0, 98% 0, 100% 100%, 0 100%);
+  }
+  .owners .image-text.italic {
+    text-align: right;
+    font-style: italic;
+  }
+  .owners .owners-text {
+    color: #ffffff;
+    padding: 3rem 0.75rem;
+  }
+  /* SERVICES */
+  .ourservices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-full {
+    background-image: url(/images/background-vector-tires.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .services-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .buyers-section, .services-section {
+    padding: 5.3125rem 10rem;
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+  .solo-card {
+    background-color: #20352C;
+    color: #ffffff;
+    padding: 1rem;
+    display: block;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 250px;
+    max-height: 325px;
+  }
+  .service-image {
+    width: 100%;
+    max-height: 193px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* SERVICES PAGE */
+  #header-services {
+    background-image: url(/images/services/service-header.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+  }
+  #customer-favorites {
+    padding: 5.3125rem 10rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+  .customer-text {
+    display: block;
+  }
+  .small-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .car-inspections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36rem;
+    width: auto;
+  }
+  .car-inspections img {
+    width: 50%;
+  }
+  .carinspection-text {
+    display: block;
+    max-height: 575px;
+    width: auto;
+    background-color: #20352C;
+    color: #ffffff;
+    padding: 2rem 5rem;
+  }
+  .category-services {
+    padding: 5.3125rem 10rem;
+  }
+  .sort-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+  }
+  .sort-buttons .filter, .sort-buttons .sort-by {
+    border: 2px solid #AE330C;
+    list-style-type: none;
+  }
+  .sort-buttons ul.filter, .sort-buttons ul.sort-by {
+    padding: 0.5rem 1rem;
+    font-family: "Hammersmith One";
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .category-servicecards {
+    display: block;
+  }
+  .category-solo-card {
+    gap: 1rem;
+    width: 100%;
+    max-height: 342px;
+  }
+  .category-solo-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .category-solocard-text {
+    background-color: #20352C;
+    color: #ffffff;
+    margin: 0;
+    padding: 1rem;
+    gap: 1rem;
+    display: block;
+    text-transform: capitalize;
+  }
+  .category-solocard-image {
+    max-height: 270px;
+    width: auto;
+  }
+  .top-row, .bottom-row {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    gap: 1rem;
+  }
+  /* ABOUT */
+  #header-about {
+    background-image: url(/images/about/about-header.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+  }
+  .owner-header {
+    background-image: url(/images/background-vector-tires.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .owners-about {
+    padding: 5.3125rem 10rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+  .aboutthe-owners-text {
+    display: block;
+  }
+  .about-owners-image {
+    max-height: 50%;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .business-text {
+    padding: 5.3125rem 10rem;
+    padding-top: 2.5rem;
+  }
+  .split-paragraph {
+    display: flex;
+    gap: 5rem;
+  }
+  .quotes-background {
+    background-color: #20352C;
+    color: #ffffff;
+  }
+  .quotes {
+    padding: 0 10rem 2.6563rem 10rem;
+    color: #ffffff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .how-contact {
+    padding: 5.3125rem 10rem 5.3125rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-business-image {
+    max-height: 50%;
+    width: auto;
+  }
+  /* CONTACT PAGE */
+  #header-contact {
+    background-image: url(/images/contact/contact-header.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+  }
+  .draft-email {
+    font-family: "Karla";
+  }
+  .draft-email .inquiries {
+    padding: 5.3125rem 10rem;
+    margin: 0 auto;
+  }
+  .note-dropper h4 {
+    font-style: italic;
+  }
+  .note-dropper {
+    border: #20352C 1rem;
+    border-top: 2px solid #20352C;
+    border-bottom: 2px solid #20352C;
+    display: block;
+  }
+  .note-dropper summary {
+    padding: 0.9rem 0;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .note-dropper ul {
+    padding: 0 1.2rem 0.9rem 1.7rem;
+  }
+  .note-dropper li {
+    margin-bottom: 0.8rem;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1.2rem 0;
+  }
+  .field label {
+    margin: 1rem 0;
+  }
+  .field input {
+    height: 2.5rem;
+    border: 2px solid #20352C;
+  }
+  .message-text {
+    width: 100%;
+    height: 10.625rem;
+    padding: 1rem;
+    border: 2px solid #20352C;
+  }
+  .enter-name {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .enter-name .field {
+    width: 50%;
+  }
+  .agreement-terms {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1.56rem 0;
+  }
+  input:focus, textarea:focus {
+    border-color: #AE330C;
+    box-shadow: #1D190E;
+  }
+  .faq {
+    padding: 5.3125rem 10rem;
+    background-color: #20352C;
+    color: #ffffff;
+    font-family: "Karla";
+  }
+  .faq .faq-questions {
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #ffffff;
+  }
+  .faq .bottom {
+    border-bottom: none;
+  }
+  .faq details summary {
+    list-style: none;
+    position: relative;
+    padding-right: 2rem;
+  }
+  .faq details summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq details summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .faq details[open] summary::after {
+    content: "-";
+  }
+  .location {
+    display: flex;
+    padding: 5.3125rem 10rem;
+  }
+}
+@media (min-width: 1440px) {
+  /* —— DESKTOP —— */
+  body {
+    background-color: #EAEEF2;
+  }
+  h1 {
+    font-family: "Hammersmith One";
+    font-size: 5.75rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: #1D190E 2.5rem;
+  }
+  h2 {
+    font-family: "Hammersmith One";
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    font-family: "Karla";
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+  h4 {
+    font-family: "Karla";
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  p {
+    font-family: "Karla";
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  li {
+    font-family: "Karla";
+    font-size: 0.8rem;
+  }
+  a {
+    font-family: "Karla";
+    font-size: 1rem;
+  }
+  a:hover {
+    font-weight: bold;
+    font-size-adjust: 1rem;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  nav a li {
+    font-weight: 100;
+  }
+  .underlined-nav {
+    color: #1D190E;
+    text-transform: capitalize;
+  }
+  .underlined-greenbg {
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+  /* NAVIGATION */
+  nav ul {
+    background-color: #20352C;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    margin: 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  nav img {
+    height: 50px;
+    width: auto;
+  }
+  .hamburger-menu {
+    display: none;
   }
   .discountcontent {
     width: 100%;

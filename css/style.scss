@@ -5,6 +5,7 @@
 $background-color: #EAEEF2;
 $green: #20352C;
 $orange: #AE330C;
+$hover-orange: #932a0a;
 $white: #ffffff;
 $black: #1D190E;
 $grey: #BDBDBD;
@@ -29,7 +30,7 @@ body {
 /* —— MOBILE —— */
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 2.25rem;
         color: $white;
         text-transform: uppercase;
         font-family: $h1-font;
@@ -86,7 +87,7 @@ body {
 
     nav ul{
         background-color: $green;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: space-between;
         color: $white;
@@ -95,16 +96,66 @@ body {
 
         li {
             display: none;
+            &:first-child, &:last-child {
+                display: block;
+            }
         }
 
         img {
+            width: 3rem;
+            height: auto;
+        }
+
+        .logo {
             width: 25%;
             height: auto;
         }
 
-        .hamburger-menu {
-            width: 2rem;
+        &:has(#menu-toggle:checked) {
+        max-width: 100%;
+
+            li, a {
+                display: block;
+                text-decoration: none;
+                color: $white;
+                padding: 0 .2rem;
+                white-space: nowrap;
+                font-size: .7rem;
+
+                img {
+                    width: 65%;
+                }
+            }
         }
+    }
+
+
+    #menu-toggle {
+        position: absolute;
+        width: .1rem;
+        height: auto;
+        opacity: 0;
+
+        &:checked {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    .hamburger {
+        width: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+    }
+
+    .menu-bar {
+        width: 100%;
+        display: block;
+        height: .2rem;
+        background-color: $white;
+        border-radius: .2rem;
     }
 
 .discountcontent {
@@ -229,6 +280,10 @@ a.filled-button {
     margin: .5rem 0;
     font-family: $h1-font;
     font-size: .6rem;
+
+    &:hover {
+        background-color: $hover-orange;
+    }
 }
 
 .filledbutton, .white {
@@ -382,6 +437,7 @@ a.filled-button {
 
 .small-cards {
     width: 50%;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -391,6 +447,11 @@ a.filled-button {
     a {
         color: $white;
         font-family: $p-font;
+    }
+
+    img {
+        width: 100%;
+        height: 50%;
     }
 }
 
@@ -503,6 +564,10 @@ a.filled-button {
     padding: 1rem 2.5rem;
 }
 
+.contact-business-image {
+    display: none;
+}
+
 .about-owners-image img{
     width: 75%;
     height: auto;
@@ -519,7 +584,7 @@ a.filled-button {
 .how-contact {
     display: flex;
     flex-direction: column;
-    padding: 3rem 2.5rem;
+    padding: 0 2.5rem 3rem 2.5rem;
 
         img {
             width: 50%;
@@ -619,6 +684,9 @@ input:focus, textarea:focus {
     background-color: $green;
     color: $white;
     font-family: 'Karla';
+    p {
+        line-height: 1rem;
+    }
 
     .faq-questions {
         padding: 2rem 1rem;
@@ -759,6 +827,10 @@ nav ul{
     }
 
     .hamburger-menu {
+        display: none;
+    }
+
+    #menu-toggle {
         display: none;
     }
 }
@@ -905,14 +977,18 @@ width: auto;
 }
 
 .filled-button {
-background: $orange;
-font-weight: 400;
-color: $white;
-text-decoration: none;
-text-transform: capitalize;
-padding: .5rem;
-margin: 1rem 0;
-font-family: $h1-font;
+    background: $orange;
+    font-weight: 400;
+    color: $white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .5rem;
+    margin: 1rem 0;
+    font-family: $h1-font;
+
+    &:hover {
+        background-color: $hover-orange;
+    }
 }
 
 .filledbutton, .white {
@@ -1470,6 +1546,10 @@ nav img {
     display: none;
 }
 
+#menu-toggle {
+    display: none;
+}
+
 .discountcontent {
     width: 100%;
     overflow: hidden;
@@ -1618,6 +1698,10 @@ nav img {
         text-decoration: none;
         text-transform: capitalize;
         padding: .5rem;
+
+        &:hover {
+            background-color: $hover-orange;
+        }
     }
 
     .filledbutton, .white {
@@ -1892,10 +1976,7 @@ nav img {
 }
 
 .about-owners-image {
-    max-height: 50%;
-    width: auto;
-    padding: 0;
-    margin: 0;
+    display: none;
 }
 
 .business-text {
@@ -1929,8 +2010,10 @@ nav img {
 }
 
 .contact-business-image {
-    max-height: 50%;
-    width: auto;
+    height: auto;
+    max-width: 50%;
+    object-fit: contain;
+    padding: 0 1rem 0 0;
 }
 
 /* CONTACT PAGE */
@@ -2171,6 +2254,10 @@ nav img {
     display: none;
 }
 
+#menu-toggle {
+    display: none;
+}
+
 .discountcontent {
     width: 100%;
     overflow: hidden;
@@ -2319,6 +2406,10 @@ nav img {
         text-decoration: none;
         text-transform: capitalize;
         padding: .5rem;
+
+        &:hover {
+            background-color: $hover-orange;
+        }
     }
 
     .filledbutton, .white {
@@ -2565,7 +2656,7 @@ nav img {
     gap: 1rem;
 }
 
-/* ABOUT */
+/* ABOUT PAGE */
 #header-about{
     background-image: url(/images/about/about-header.jpg);
     display: flex;
@@ -2593,8 +2684,8 @@ nav img {
 }
 
 .about-owners-image {
-    max-height: 50%;
-    width: auto;
+    height: 50%;
+    max-width: 50%;
     padding: 0;
     margin: 0;
 }
@@ -2630,8 +2721,10 @@ nav img {
 }
 
 .contact-business-image {
-    max-height: 50%;
-    width: auto;
+    height: auto;
+    max-width: 50%;
+    object-fit: contain;
+    padding: 0 1rem 0 0;
 }
 
 /* CONTACT PAGE */

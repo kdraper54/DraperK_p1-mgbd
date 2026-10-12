@@ -407,7 +407,7 @@ a.filled-button {
         justify-content: center;
         flex: 0 0 auto;
         width: 50%;
-        max-height: auto;
+        height: auto;
 
         img {
             height: 10.3rem;
@@ -683,7 +683,6 @@ a.filled-button {
 
 input:focus, textarea:focus {
     border-color: $orange;
-    box-shadow: $black;
 }
 
 .faq {
@@ -1124,7 +1123,7 @@ img {
     justify-content: center;
     flex: 0 0 auto;
     max-width: 35%;
-    max-height: auto;
+    height: auto;
 
     img {
         height: 18.3rem;
@@ -1391,7 +1390,6 @@ img {
 
 input:focus, textarea:focus {
     border-color: $orange;
-    box-shadow: $black;
 }
 
 .faq {
@@ -1505,7 +1503,7 @@ a {
 
 a:hover {
     font-weight: bold;
-    font-size-adjust: 1rem;
+    font-size: 1.125rem;
 }
 
 a:visited {
@@ -1664,6 +1662,7 @@ nav img {
         background-image: url("../../images/home/mgbd-header.jpg");
         background-size: cover;
         height: 100%;
+        object-fit: cover;
     }
 
     .divider-tag{
@@ -2111,7 +2110,6 @@ nav img {
 
 input:focus, textarea:focus {
     border-color: $orange;
-    box-shadow: $black;
 }
 
 .faq {
@@ -2188,7 +2186,6 @@ h1 {
     font-size: 5.75rem;
     text-transform: uppercase;
     color: $white;
-    text-shadow: $black 2.5rem;
 }
 
 h2 {
@@ -2229,7 +2226,7 @@ a {
 
 a:hover {
     font-weight: bold;
-    font-size-adjust: 1rem;
+    font-size: 1.125rem;
 }
 
 a:visited {
@@ -2837,7 +2834,6 @@ nav img {
 
 input:focus, textarea:focus {
     border-color: $orange;
-    box-shadow: $black;
 }
 
 .faq {
